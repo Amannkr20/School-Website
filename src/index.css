@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1E40AF;
+  --color-accent: #2563EB;
+  --color-light: #F8FAFC;
+  --color-secondary: #F59E0B;
+  --color-dark: #1F2937;
+  --color-secondary-light: #FBBF24;
+  --color-secondary-dark: #D97706;
+
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Fraunces", serif;
+
+  --shadow-panel: 0 18px 50px rgba(31, 41, 55, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(30, 64, 175, 0.06), transparent 28%),
+    linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  color: var(--color-dark);
+}
