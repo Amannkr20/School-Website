@@ -1,58 +1,75 @@
 import React from 'react';
-import NoticeBoard from './NoticeBoard';
 
 export default function Hero({ onOpenAdmissions }) {
   return (
-    <section className="relative overflow-hidden bg-primary text-white text-left">
+    <section className="relative overflow-hidden bg-light py-16 lg:py-24 text-left">
+      {/* Decorative background shape */}
       <div
-        className="absolute inset-y-0 right-0 hidden w-2/5 bg-[radial-gradient(circle_at_top,rgba(245,175,25,0.28),transparent_58%)] lg:block"
+        className="absolute -right-40 -top-40 hidden h-[600px] w-[600px] rounded-full bg-secondary/5 blur-3xl lg:block"
       />
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:px-8 lg:grid-cols-[1.3fr_0.7fr] lg:py-24">
-        <div className="relative flex flex-col justify-center">
+      <div
+        className="absolute -left-20 bottom-0 hidden h-[300px] w-[300px] rounded-full bg-primary/5 blur-2xl lg:block"
+      />
+
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-2 lg:items-center">
+        {/* Left Side: Content */}
+        <div className="relative z-10 flex flex-col justify-center">
           <span
-            className="inline-flex max-w-fit rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.26em] text-secondary mb-6"
+            className="inline-flex max-w-fit items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary border border-secondary/20 mb-6"
           >
-            Now Enrolling For 2026 - 2027
+            <i className="fa-solid fa-graduation-cap text-secondary"></i>
+            Admissions Open 2026 - 2027
           </span>
-          <h1 className="font-display text-5xl leading-tight md:text-7xl font-bold">
-            A bright start for curious minds and joyful hearts.
+          <h1 className="font-display text-4xl leading-tight text-primary font-bold md:text-6xl">
+            A vibrant beginning for curious minds.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/78">
-            Shri Kids School in Bhilai blends play-based exploration, foundational literacy, and a caring environment where every child thrives and grows with confidence.
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-dark/70 md:text-lg">
+            Shri Kids School in Bhilai blends play-based exploration, foundational literacy, and a nurturing environment where every child grows with confidence and joy.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <button
               onClick={onOpenAdmissions}
-              className="rounded-full bg-secondary px-7 py-3 text-center text-sm font-extrabold uppercase tracking-[0.18em] text-primary transition hover:bg-white cursor-pointer"
+              className="rounded-full bg-secondary px-8 py-4 text-center text-xs font-extrabold uppercase tracking-[0.2em] text-white transition hover:bg-primary shadow-lg hover:shadow-primary/20 cursor-pointer"
             >
               Start Admission
             </button>
             <a
               href="#programs"
-              className="rounded-full border border-white/25 px-7 py-3 text-center text-sm font-extrabold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-primary"
+              className="rounded-full border border-primary/15 px-8 py-4 text-center text-xs font-extrabold uppercase tracking-[0.2em] text-primary transition hover:bg-primary/5"
             >
               Explore Programs
             </a>
           </div>
+        </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-3xl border border-white/10 bg-white/8 p-5 backdrop-blur-md">
-              <p className="text-3xl font-extrabold text-secondary">8:1</p>
-              <p className="mt-2 text-sm uppercase tracking-[0.18em] text-white/65">Student-Teacher Ratio</p>
-            </div>
-            <div className="rounded-3xl border border-white/10 bg-white/8 p-5 backdrop-blur-md">
-              <p className="text-3xl font-extrabold text-secondary">15+</p>
-              <p className="mt-2 text-sm uppercase tracking-[0.18em] text-white/65">Activities &amp; Hobbies</p>
-            </div>
-            <div className="rounded-3xl border border-white/10 bg-white/8 p-5 backdrop-blur-md">
-              <p className="text-3xl font-extrabold text-secondary">100%</p>
-              <p className="mt-2 text-sm uppercase tracking-[0.18em] text-white/65">Joy &amp; Safety Guaranteed</p>
+        {/* Right Side: Professional Image Container */}
+        <div className="relative z-10 lg:pl-6">
+          <div className="relative mx-auto max-w-lg lg:max-w-none">
+            {/* Background Accent Frame */}
+            <div className="absolute -inset-3 rounded-[2.5rem] border-2 border-dashed border-secondary/20 lg:-inset-4"></div>
+            
+            {/* Main Image Frame */}
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] bg-white shadow-xl border border-black/5 sm:aspect-[1.4/1]">
+              <img
+                src="/parent_child.png"
+                alt="Parent and child learning together"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+              
+              {/* Micro badge overlay */}
+              <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/90 p-4 shadow-lg backdrop-blur-sm border border-black/5 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/15 text-primary">
+                  <i className="fa-solid fa-star text-secondary"></i>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-primary uppercase tracking-wider leading-none mb-1">Play & Primary School</p>
+                  <p className="text-[10px] text-dark/60 font-semibold">10+ Years of Educational Legacy in Bhilai</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Live Notices NoticeBoard Sidebar */}
-        <NoticeBoard />
       </div>
     </section>
   );

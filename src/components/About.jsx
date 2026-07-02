@@ -5,13 +5,13 @@ export default function About() {
     <section id="about" className="mx-auto max-w-7xl px-4 py-16 md:px-8 lg:py-24 text-left">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div
-          className="rounded-[2rem] bg-gradient-to-br from-secondary to-secondary-light p-8 text-white shadow-[0_18px_50px_rgba(31,41,55,0.06)]"
+          className="rounded-[2rem] bg-primary p-8 text-white shadow-[0_18px_50px_rgba(31,41,55,0.06)] border border-black/5"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/80">Mission</p>
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-secondary">Mission</p>
           <h2 className="mt-4 font-display text-4xl leading-tight font-bold">
             Children should begin their educational journey feeling safe, loved, and eager to explore.
           </h2>
-          <p className="mt-5 text-base leading-7 text-white/88">
+          <p className="mt-5 text-base leading-7 text-white/80">
             We combine play-based experiential learning with foundational literacy, numeracy, creative arts, and physical development. The result is a vibrant, supportive environment where children grow emotionally, socially, and intellectually.
           </p>
         </div>

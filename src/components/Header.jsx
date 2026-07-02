@@ -41,7 +41,7 @@ const Header = React.memo(function Header({ onOpenAdmissions, onShowToast }) {
               e.preventDefault();
               onOpenAdmissions();
             }}
-            className="hidden rounded-full bg-secondary px-5 py-2.5 text-sm font-bold text-white transition hover:bg-accent md:inline-flex cursor-pointer"
+            className="hidden rounded-full bg-secondary px-5 py-2.5 text-sm font-bold text-white transition hover:bg-primary md:inline-flex cursor-pointer"
           >
             Apply Now
           </button>
