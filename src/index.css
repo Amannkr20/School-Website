@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0F2147; /* Elegant Deep Navy */
-  --color-accent: #1E40AF;  /* Classic Blue */
-  --color-light: #FAF9F6;   /* Warm off-white */
-  --color-secondary: #C49A45; /* Academic Gold */
-  --color-dark: #1E293B;    /* Slate-800 body text */
+  --color-primary: #0F2147;
+  /* Elegant Deep Navy */
+  --color-accent: #1E40AF;
+  /* Classic Blue */
+  --color-light: #FAF9F6;
+  /* Warm off-white */
+  --color-secondary: #C49A45;
+  /* Academic Gold */
+  --color-dark: #1E293B;
+  /* Slate-800 body text */
   --color-secondary-light: #FDF6E2;
   --color-secondary-dark: #9E7427;
 
