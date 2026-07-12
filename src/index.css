@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* KPS Sarona inspired colors: Academic navy, corporate gold, clean slate */
+  --color-primary: #002e5b;
+  /* Deep academic navy */
+  --color-primary-soft: #004080;
+  --color-accent: #d32f2f;
+  /* KPS crimson/red */
+  --color-light: #f8fafc;
+  /* Clean light slate */
+  --color-secondary: #f59e0b;
+  /* Gold/Amber accent */
+  --color-dark: #0f172a;
+  /* Slate dark text */
+  --color-secondary-light: #fef3c7;
+  --color-secondary-dark: #b45309;
+  --color-poppy: #dc2626;
+  --color-leaf: #16a34a;
+
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Manrope", sans-serif;
+
+  --shadow-panel: 0 10px 30px rgba(0, 46, 91, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-dark);
+}
+
+/* Accessible focus ring everywhere, regardless of the element's own styling */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes bounce-in {
+  0% { transform: translateY(12px) scale(0.96); opacity: 0; }
+  60% { transform: translateY(-2px) scale(1.01); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.animate-bounce-in {
+  animation: bounce-in 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
